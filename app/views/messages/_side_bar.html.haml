@@ -1,0 +1,17 @@
+.chat-side
+  .side-header
+    %p(class = "side-header__username")ユーザー名
+    %div
+      = link_to "#", class: "side-header__new-group" do
+        = icon('fas', 'edit')
+        %span<>
+      = link_to "#", class: "side-header__edit-user" do
+        = icon('fas', 'cog')
+        %span<>
+
+  .groups
+    %ul(class = "group")
+      %li(class = "group__name")グループ名
+      %li(class = "group__latest-message")最新のメッセージ
+
+
