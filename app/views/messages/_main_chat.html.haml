@@ -1,0 +1,38 @@
+
+.main-chat
+  .main-header
+    .left-box
+      %p.left-box__user-name
+        グループ名
+      %ul.left-box__member-list
+        メンバー：
+        %li.left-box__member-list__member
+          usr1
+    .right-box
+      = link_to "#", class: "right-box__group-edit" do
+        Edit
+  .message
+    .message__upper-info
+      %p.message__upper-info__talker
+        ユーザー名1
+      %p.message__upper-info__date
+        投稿日時1
+    %p.message__text
+      テキスト1
+    .message__upper-info
+      %p.message__upper-info__talker
+        ユーザー名2
+      %p.message__upper-info__date
+        投稿日時2
+    %p.message__text
+      テキスト2
+  .form
+    %form.new-message
+      .input-box
+        %input.input-box__text{type: "text", placeholder: "type a message"}
+        %label.input-box__image
+          = icon('fas', 'image')
+          %input.input-box__image__file{type: "file"}
+      %input.submit-btn{type: "submit", value: "Send"}
+
+
