@@ -14,18 +14,25 @@
   .message
     .message__upper-info
       %p.message__upper-info__talker
-        ユーザー名
+        ユーザー名1
       %p.message__upper-info__date
-        投稿日時
+        投稿日時1
     %p.message__text
-      テキスト
+      テキスト1
+    .message__upper-info
+      %p.message__upper-info__talker
+        ユーザー名2
+      %p.message__upper-info__date
+        投稿日時2
+    %p.message__text
+      テキスト2
   .form
     %form.new-message
       .input-box
-        %input.input-box__text{:type => "text", :placeholder => "type a message"}
+        %input.input-box__text{type: "text", placeholder: "type a message"}
         %label.input-box__image
           = icon('fas', 'image')
-          %input.input-box__image__file{:type => "file"}
-      %input.submit-btn{:type => "submit", :value => "Send"}
+          %input.input-box__image__file{type: "file"}
+      %input.submit-btn{type: "submit", value: "Send"}
 
 
