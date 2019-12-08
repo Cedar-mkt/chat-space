@@ -1,12 +1,12 @@
 .chat-side
   .side-header
     %p.side-header__username
-      ユーザー名
+      = current_user.name
     .side-header__box
       = link_to "#", class: "side-header__box__new-group" do
         = icon('fas', 'edit')
         %span<>
-      = link_to "#", class: "side-header__box__edit-user" do
+      = link_to edit_user_path(current_user), class: "side-header__box__edit-user" do
         = icon('fas', 'cog')
         %span<>
 
