@@ -4,7 +4,6 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-
 @import "./messages";
 @import "./modules/side_bar.scss";
 @import "./modules/main_chat.scss";
@@ -12,3 +11,5 @@
 @import "./modules/user.scss";
 @import "./config/colors.scss";
 @import "./modules/flash.scss";
+
+@import "./modules/group.scss";
