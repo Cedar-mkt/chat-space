@@ -3,7 +3,7 @@
     %p.side-header__username
       = current_user.name
     .side-header__box
-      = link_to "#", class: "side-header__box__new-group" do
+      = link_to new_group_path, class: "side-header__box__new-group" do
         = icon('fas', 'edit')
         %span<>
       = link_to edit_user_path(current_user), class: "side-header__box__edit-user" do
@@ -11,10 +11,10 @@
         %span<>
 
   .groups
-    %ul.group
-      %li.group__name
-        グループ名
-      %li.group__latest-message
-        最新のメッセージ
-
-
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__latest-message
+            最新のメッセージ
